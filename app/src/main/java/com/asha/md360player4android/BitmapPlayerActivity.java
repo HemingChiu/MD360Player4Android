@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.asha.vrlib.MDVRLibrary;
+import com.asha.vrlib.model.MDPinchConfig;
 import com.asha.vrlib.model.MDRay;
 import com.asha.vrlib.plugins.hotspot.IMDHotspot;
 import com.asha.vrlib.texture.MD360BitmapTexture;
@@ -106,6 +107,7 @@ public class BitmapPlayerActivity extends MD360PlayerActivity {
                     }
                 })
                 .pinchEnabled(true)
+//                .pinchConfig(new MDPinchConfig().setMin(0.5f).setMax(8.0f).setDefaultValue(0.8f))
                 .projectionFactory(new CustomProjectionFactory())
                 .build(R.id.gl_view);
     }
